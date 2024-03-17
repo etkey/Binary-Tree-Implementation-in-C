@@ -51,23 +51,23 @@ gcc your_program.c -L. -lbtree -o your_program
 
 This library is designed to be used as a reusable component in other C programs. Here's a basic outline for using the library:
 
--`Include the header file`:
+###Include the header file:
 ```c
 #include "binary_tree.h"
 ```
 
-`Create a binary tree`:
+###Create a binary tree`:
 ```c
 BTree* my_tree = create_tree();
 ```
 
-- `Insert nodes`:
+### Insert nodes:
 ```c
 insert_BTree(my_tree, 50, "Root Node");
 insert_BTree(my_tree, 30, "Left Child");
 ```
 
-- `Perform operations`:
+##Perform operations:
 ```c
 preorder_traversal(my_tree);
 inorder_traversal(my_tree);
@@ -78,7 +78,10 @@ Node* found_node = search_BTree(my_tree, search_value);
 
 // ... (delete subtree if needed)
 ```
-`Free the memory`
+###Free the memory
+```c
+destroy(my_tree);
+```
 
 
 Note: Remember to link the library during compilation using the -l flag with the appropriate library name (refer to the Implementation section for details).
