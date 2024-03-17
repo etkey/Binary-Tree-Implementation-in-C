@@ -25,7 +25,7 @@ This C program demonstrates the implementation of a binary tree data structure. 
 
 ##Implementation
 
-### `Compiling as a Library`:
+### Compiling as a Library:
 
 Use the gcc compiler with appropriate flags to compile the code:
 ```bash
@@ -39,7 +39,7 @@ ar rcs libbtree.a binary_tree.o
 This command will create an archive library named libbtree.a (or your chosen name) containing the compiled code from binary_tree.c. 
 This library can now be linked with other C programs that need to use the binary tree functionality.
 
-### `Using the Library in Another Program`:
+### Using the Library in Another Program:
 
 In your main program, include binary_tree.h.
 Link the library during compilation using the -l flag:
@@ -51,12 +51,12 @@ gcc your_program.c -L. -lbtree -o your_program
 
 This library is designed to be used as a reusable component in other C programs. Here's a basic outline for using the library:
 
-###Include the header file:
+### Include the header file:
 ```c
 #include "binary_tree.h"
 ```
 
-###Create a binary tree`:
+### Create a binary tree:
 ```c
 BTree* my_tree = create_tree();
 ```
@@ -67,7 +67,7 @@ insert_BTree(my_tree, 50, "Root Node");
 insert_BTree(my_tree, 30, "Left Child");
 ```
 
-##Perform operations:
+## Perform operations:
 ```c
 preorder_traversal(my_tree);
 inorder_traversal(my_tree);
@@ -78,7 +78,7 @@ Node* found_node = search_BTree(my_tree, search_value);
 
 // ... (delete subtree if needed)
 ```
-###Free the memory
+### Free the memory
 ```c
 destroy(my_tree);
 ```
